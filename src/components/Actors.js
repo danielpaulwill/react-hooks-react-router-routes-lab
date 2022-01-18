@@ -4,13 +4,13 @@ import { actors } from "../data";
 function Actors() {
 
   const actorsList = actors.map((actor) => (
-    <div>
+    <div key={actor.name}>
       <h2>Name: {actor.name}</h2>
       Movies: 
       <ul key={actor}>
         {actor.movies.map((movie) => {
           return (
-          <li key={actor.name.length.toString() + movie}>{movie}</li>
+          <li key={actor.name + movie}>{movie}</li>
         )})}
       </ul>
     </div>
